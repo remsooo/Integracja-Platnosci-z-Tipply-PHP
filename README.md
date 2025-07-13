@@ -18,6 +18,7 @@ Ten skrypt PHP służy do inicjowania i weryfikacji płatności (darowizn) za po
  - [Jak Używać](https://github.com/remsooo/Integracja-Platnosci-z-Tipply-PHP/blob/main/README.md#jak-u%C5%BCywa%C4%87)
    - [Konfiguracja](https://github.com/remsooo/Integracja-Platnosci-z-Tipply-PHP/blob/main/README.md#konfiguracja)
    - [Integracja](https://github.com/remsooo/Integracja-Platnosci-z-Tipply-PHP/blob/main/README.md#integracja)
+ - [Kontakt](https://github.com/remsooo/Integracja-Platnosci-z-Tipply-PHP/blob/main/README.md#kontakt)
 
 ## Opis
 Głównym celem tego skryptu jest zapewnienie mechanizmu do:
@@ -159,3 +160,6 @@ Ta część kodu jest wykonywana, gdy skrypt nie odbiera żądania POST (czyli j
 ### Integracja
 1. Umieść ten kod PHP na swoim serwerze webowym.
 2. Upewnij się, że Twoja strona internetowa lub aplikacja wywołuje ten skrypt, aby rozpocząć proces płatności, przekazując ewentualnie zmienne, które chcesz dynamicznie ustawić (np. `email`, `message`, `amount`).
+
+## Kontakt
+- Discord: `remsooo`

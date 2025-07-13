@@ -46,7 +46,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $code = $data['code'] ?? null;
 
         $data = $numerzamowienia.$meil.$cokupil.$kwota;
-        $secretKey = 'https://widgets.tipply.pl/TIP_ALERT/e272f65d-56b2-45cb-a052-03ab59e2a4b8'; // Klucz tajny do weryfikacji HMAC
+        $secretKey = 'https://widgets.tipply.pl/TIP_ALERT/'; // Klucz tajny do weryfikacji HMAC URL webhook
         $generatedHMAC = hash_hmac('sha256', $data, $secretKey);
 
         if (hash_equals($code, $generatedHMAC)) {

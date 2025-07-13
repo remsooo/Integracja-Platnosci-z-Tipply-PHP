@@ -8,7 +8,7 @@ Ten skrypt PHP służy do inicjowania i weryfikacji płatności (darowizn) za po
 
 ## Spis Treści
 - [Integracja Płatności z Tipply (PHP)](https://github.com/remsooo/Integracja-Platnosci-z-Tipply-PHP/blob/main/README.md#integracja-p%C5%82atno%C5%9Bci-z-tipply-php)
- - [Opis](https://github.com/remsooo/Integracja-Platnosci-z-Tipply-PHP/blob/main/README.md#spis-tre%C5%9Bci)
+ - [Opis](https://github.com/remsooo/Integracja-Platnosci-z-Tipply-PHP/blob/main/README.md#opis)
  - [Wymagania](https://github.com/remsooo/Integracja-Platnosci-z-Tipply-PHP/blob/main/README.md#wymagania)
  - [Struktura Kodu](https://github.com/remsooo/Integracja-Platnosci-z-Tipply-PHP/blob/main/README.md#struktura-kodu)
    - [Obsługa Żądań POST (Webhook)](https://github.com/remsooo/Integracja-Platnosci-z-Tipply-PHP/blob/main/README.md#obs%C5%82uga-%C5%BC%C4%85da%C5%84-post-webhook)

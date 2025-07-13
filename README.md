@@ -163,3 +163,9 @@ Ta część kodu jest wykonywana, gdy skrypt nie odbiera żądania POST (czyli j
 
 ## Kontakt
 - Discord: `remsooo`
+
+## Licencja
+[MIT](https://choosealicense.com/licenses/mit/)
+
+## Ważna uwaga
+Ten kod jest projektem hobbystycznym i ma charakter demonstracyjny. Nie jest to oficjalna integracja Tipply ani Remus API. Przed użyciem w środowisku produkcyjnym zaleca się dokładne przetestowanie, audyt bezpieczeństwa oraz zapoznanie się z oficjalną dokumentacją Tipply i usług, z których korzystasz. Autorzy nie ponoszą odpowiedzialności za wszelkie szkody wynikające z użytkowania tego kodu.

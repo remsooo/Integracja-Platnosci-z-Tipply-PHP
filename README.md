@@ -153,11 +153,9 @@ Ta część kodu jest wykonywana, gdy skrypt nie odbiera żądania POST (czyli j
 ## Jak Używać
 ### Konfiguracja
 1. Zaktualizuj dane Tipply: Zmień zmienne `$cel`, `$link`, `$webhook` na swoje rzeczywiste wartości z konta Tipply.
-2. Ustaw klucz tajny HMAC: W sekcji webhooka, zmień `$secretKey` na rzeczywisty, bezpieczny klucz tajny, który będzie udostępniony przez API, które wysyła webhooki. Nie używaj URL-a jako klucza tajnego. Klucz ten powinien być znany tylko Tobie i dostawcy webhooka.
-3. Adres URL `accepted`: Upewnij się, że `$accepted` wskazuje na prawidłowy adres URL, pod którym Twój system będzie przetwarzał informacje o zakończonej płatności.
-4. Adres API `api.remus.wtf`: Upewnij się, że adres `http://api.remus.wtf/submit` jest poprawny i dostępny.
+2. Adres URL `accepted`: Upewnij się, że `$accepted` wskazuje na prawidłowy adres URL, pod którym Twój system będzie przetwarzał informacje o zakończonej płatności.
+3. Adres API `api.remus.wtf`: Upewnij się, że adres `http://api.remus.wtf/submit` jest poprawny i dostępny.
 
 ### Integracja
 1. Umieść ten kod PHP na swoim serwerze webowym.
-2. Skonfiguruj webhooki w swojej platformie płatniczej (lub na `api.remus.wtf`, jeśli to on wysyła webhooki) tak, aby wskazywały na adres URL, pod którym znajduje się ten skrypt (np. `yourdomain.com/submit_payment.php`).
-3. Upewnij się, że Twoja strona internetowa lub aplikacja wywołuje ten skrypt, aby rozpocząć proces płatności, przekazując ewentualnie zmienne, które chcesz dynamicznie ustawić (np. `email`, `message`, `amount`).
+2. Upewnij się, że Twoja strona internetowa lub aplikacja wywołuje ten skrypt, aby rozpocząć proces płatności, przekazując ewentualnie zmienne, które chcesz dynamicznie ustawić (np. `email`, `message`, `amount`).

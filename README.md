@@ -7,17 +7,17 @@ Integracja Płatności z Tipply (PHP)
 Ten skrypt PHP służy do inicjowania i weryfikacji płatności (darowizn) za pośrednictwem platformy Tipply, wykorzystując zewnętrzny serwis api.remus.wtf. Kod dzieli się na dwie główne części: obsługę żądań POST do weryfikacji płatności (webhook) oraz generowanie i wysyłanie danych do zewnętrznego API w celu rozpoczęcia nowej transakcji.
 
 ## Spis Treści
-- [Integracja Płatności z Tipply (PHP)](https://github.com/remsooo/Integracja-Platnosci-z-Tipply-PHP/edit/main/README.md#integracja-p%C5%82atno%C5%9Bci-z-tipply-php)
- - [Opis](https://github.com/remsooo/Integracja-Platnosci-z-Tipply-PHP/edit/main/README.md#opis)
- - [Wymagania](https://github.com/remsooo/Integracja-Platnosci-z-Tipply-PHP/edit/main/README.md#wymagania)
- - [Struktura Kodu](https://github.com/remsooo/Integracja-Platnosci-z-Tipply-PHP/edit/main/README.md#struktura-kodu)
-   - [Obsługa Żądań POST (Webhook)](https://github.com/remsooo/Integracja-Platnosci-z-Tipply-PHP/edit/main/README.md#obs%C5%82uga-%C5%BC%C4%85da%C5%84-post-webhook)
-   - [Generowanie Identyfikatora Zamówienia](https://github.com/remsooo/Integracja-Platnosci-z-Tipply-PHP/edit/main/README.md#generowanie-identyfikatora-zam%C3%B3wienia)
-   - [Konfiguracja Danych Transakcji](https://github.com/remsooo/Integracja-Platnosci-z-Tipply-PHP/edit/main/README.md#konfiguracja-danych-transakcji)
-   - [Wysyłanie Danych do API Zewnętrznego](https://github.com/remsooo/Integracja-Platnosci-z-Tipply-PHP/edit/main/README.md#wysy%C5%82anie-danych-do-api-zewn%C4%99trznego)
- - [Jak Używać](https://github.com/remsooo/Integracja-Platnosci-z-Tipply-PHP/edit/main/README.md#jak-u%C5%BCywa%C4%87)
-   - [Konfiguracja](https://github.com/remsooo/Integracja-Platnosci-z-Tipply-PHP/edit/main/README.md#konfiguracja)
-   - [Integracja](https://github.com/remsooo/Integracja-Platnosci-z-Tipply-PHP/edit/main/README.md#integracja)
+- [Integracja Płatności z Tipply (PHP)](https://github.com/remsooo/Integracja-Platnosci-z-Tipply-PHP/blob/main/README.md#integracja-p%C5%82atno%C5%9Bci-z-tipply-php)
+ - [Opis](https://github.com/remsooo/Integracja-Platnosci-z-Tipply-PHP/blob/main/README.md#spis-tre%C5%9Bci)
+ - [Wymagania](https://github.com/remsooo/Integracja-Platnosci-z-Tipply-PHP/blob/main/README.md#wymagania)
+ - [Struktura Kodu](https://github.com/remsooo/Integracja-Platnosci-z-Tipply-PHP/blob/main/README.md#struktura-kodu)
+   - [Obsługa Żądań POST (Webhook)](https://github.com/remsooo/Integracja-Platnosci-z-Tipply-PHP/blob/main/README.md#obs%C5%82uga-%C5%BC%C4%85da%C5%84-post-webhook)
+   - [Generowanie Identyfikatora Zamówienia](https://github.com/remsooo/Integracja-Platnosci-z-Tipply-PHP/blob/main/README.md#generowanie-identyfikatora-zam%C3%B3wienia)
+   - [Konfiguracja Danych Transakcji](https://github.com/remsooo/Integracja-Platnosci-z-Tipply-PHP/blob/main/README.md#konfiguracja-danych-transakcji)
+   - [Wysyłanie Danych do API Zewnętrznego](https://github.com/remsooo/Integracja-Platnosci-z-Tipply-PHP/blob/main/README.md#wysy%C5%82anie-danych-do-api-zewn%C4%99trznego)
+ - [Jak Używać](https://github.com/remsooo/Integracja-Platnosci-z-Tipply-PHP/blob/main/README.md#jak-u%C5%BCywa%C4%87)
+   - [Konfiguracja](https://github.com/remsooo/Integracja-Platnosci-z-Tipply-PHP/blob/main/README.md#konfiguracja)
+   - [Integracja](https://github.com/remsooo/Integracja-Platnosci-z-Tipply-PHP/blob/main/README.md#integracja)
 
 ## Opis
 Głównym celem tego skryptu jest zapewnienie mechanizmu do:

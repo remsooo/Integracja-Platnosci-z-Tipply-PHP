@@ -1,8 +1,6 @@
 # Integracja Płatności z Tipply (PHP)
 Ten skrypt PHP służy do inicjowania i weryfikacji płatności (darowizn) za pośrednictwem platformy Tipply, wykorzystując zewnętrzny serwis `api.remus.wtf`. Kod dzieli się na dwie główne części: obsługę żądań POST do weryfikacji płatności (webhook) oraz generowanie i wysyłanie danych do zewnętrznego API w celu rozpoczęcia nowej transakcji.
 
-Jasne, przygotowałem kompleksowy opis tego kodu PHP, który możesz wykorzystać na GitHubie. Obejmuje on cel skryptu, jego działanie, strukturę oraz szczegółowe wyjaśnienie każdej sekcji.
-
 Integracja Płatności z Tipply (PHP)
 Ten skrypt PHP służy do inicjowania i weryfikacji płatności (darowizn) za pośrednictwem platformy Tipply, wykorzystując zewnętrzny serwis api.remus.wtf. Kod dzieli się na dwie główne części: obsługę żądań POST do weryfikacji płatności (webhook) oraz generowanie i wysyłanie danych do zewnętrznego API w celu rozpoczęcia nowej transakcji.
 

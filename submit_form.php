@@ -34,15 +34,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     echo "Błąd: Dozwolone tylko żądania POST.";
 }
 
-    function generateOrderId() {
-        $randomString = strtoupper(substr(md5(uniqid(mt_rand(), true)), 0, 10));
-    
-        return $randomString;
-    }
-    $orderid = generateOrderId();
-
-
-    $nickname = $orderid;                                        // Ta zmienna służy do przechowywania pseudonimu gracza lub unikalnego identyfikatora zamówienia. Zaleca się użycie generatora identyfikatorów zamówień w celu zapewnienia lepszego śledzenia i integralności danych.
     
     $email = 'test@test.com';                                    // Ta zmienna przechowuje adres e-mail klienta. Jest to kluczowe dla komunikacji, takiej jak wysyłanie potwierdzeń płatności lub paragonów.
     
@@ -62,7 +53,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 
     $postData = json_encode([
-        'nickname' => $nickname,
         'email' => $email,
         'message' => $message,
         'amount' => $amount,
@@ -73,7 +63,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         'method' => $method,
     ]);
 
-    $ch = curl_init('http://api.remus.wtf/pay/submit');
+    $ch = curl_init('http://api.remus.wtf/pay/generate');
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
     curl_setopt($ch, CURLOPT_POST, true);
     curl_setopt($ch, CURLOPT_HTTPHEADER, [
@@ -100,4 +90,5 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     curl_close($ch);
     echo "Nie udało się znaleźć nagłówka Location. Odpowiedź serwera: $response";
+
 ?>

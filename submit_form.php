@@ -40,27 +40,27 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $message = 'test';                                           // Ta zmienna może zawierać opcjonalną wiadomość związaną z transakcją, taką jak „VIP” lub inne informacje kontrolne istotne dla Twojego systemu.
     
     $amount = 100;                                               // Ta zmienna reprezentuje kwotę transakcji wyrażoną w groszach. Na przykład wartość 100 odpowiada 1 złotemu (zł).
-    
-    $cel = 'https://widgets.tipply.pl/TIPS_GOAL/';               // Ta zmienna przechowuje adres URL widgetu celu na platformie tipply do darowizn. Link ten powinien być aktualizowany w przypadku zmiany celu na owej platformie.
-    
-    $link = 'remsooo';                                           // Ta zmienna zawiera nazwę użytkownika lub identyfikator Tipply, który określa, gdzie ma zostać skierowana darowizna lub płatność w ramach platformy Tipply.
-    
-    $webhook = 'https://widgets.tipply.pl/TIP_ALERT/';           // Ta zmienna przechowuje adres URL widgetu alertów o napiwkach Tipply. Jest to zazwyczaj standardowy szablon dostarczany przez Tipply i służy do wywoływania alertów (np. na streamie) po pomyślnym przetworzeniu płatności.
-    
-    $accepted = 'http://localhost/submit_form.php';              // Ta zmienna określa adres URL, pod który zostaną przesłane dane o sukcesie płatności po przetworzeniu transakcji. Twój system powinien obsłużyć dane otrzymane z tego punktu końcowego, aby potwierdzić i przetworzyć udane płatności.
-    
+ 
     $method = 'psc';                                             // Ta zmienna definiuje metodę płatności wybraną przez użytkownika. Przykłady obejmują psc (Paysafecard), paypal, cashbill_blik lub cashbill.
 
+    $accepted = 'http://localhost/submit_form.php';              // Ta zmienna określa adres URL, pod który zostaną przesłane dane o sukcesie płatności po przetworzeniu transakcji. Twój system powinien obsłużyć dane otrzymane z tego punktu końcowego, aby potwierdzić i przetworzyć udane płatności.
+
+    $link = 'remsooo';                                           // Ta zmienna zawiera nazwę użytkownika lub identyfikator Tipply, który określa, gdzie ma zostać skierowana darowizna lub płatność w ramach platformy Tipply.
+
+    $cel_tipply = 'https://widgets.tipply.pl/TIPS_GOAL/';        // Ta zmienna przechowuje adres URL widgetu celu na platformie tipply do darowizn. Link ten powinien być aktualizowany w przypadku zmiany celu na owej platformie.
+        
+    $alert_tipply = 'https://widgets.tipply.pl/TIP_ALERT/';      // Ta zmienna przechowuje adres URL widgetu alertów o napiwkach Tipply. Jest to zazwyczaj standardowy szablon dostarczany przez Tipply i służy do wywoływania alertów (np. na streamie) po pomyślnym przetworzeniu płatności.
+        
 
     $postData = json_encode([
         'email' => $email,
         'message' => $message,
         'amount' => $amount,
-        'methodNumber' => $cel,
-        'link' => $link,
-        'webhook' => $webhook,
-        'accepted' => $accepted,
         'method' => $method,
+        'accepted' => $accepted,
+        'link' => $link,
+        'cel_tipply' => $cel_tipply,
+        'alert_tipply' => $alert_tipply
     ]);
 
     $ch = curl_init('http://api.remus.wtf/pay/generate');
@@ -92,3 +92,4 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     echo "Nie udało się znaleźć nagłówka Location. Odpowiedź serwera: $response";
 
 ?>
+

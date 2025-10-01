@@ -14,7 +14,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $method = $data['method'] ?? null;
 
         $data = $numerzamowienia.$meil.$cokupil.$kwota;
-        $secretKey = 'https://widgets.tipply.pl/TIP_ALERT/';        // URL widgetu alertów o napiwkach Tipply
+        $secretKey = 'hash';        // Ta zmienna zawiera HASH wygenerowany na stronie remsopay.eu (Wkrótce).
         $generatedHMAC = hash_hmac('sha256', $data, $secretKey);
 
         if (hash_equals($code, $generatedHMAC)) {
@@ -39,7 +39,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     
     $message = 'test';                                           // Ta zmienna może zawierać opcjonalną wiadomość związaną z transakcją, taką jak „VIP” lub inne informacje kontrolne istotne dla Twojego systemu.
     
-    $amount = 100;                                               // Ta zmienna reprezentuje kwotę transakcji wyrażoną w groszach. Na przykład wartość 100 odpowiada 1 złotemu (zł).
+    $amount = 1;                                                 // Ta zmienna reprezentuje kwotę transakcji. Formaty kwot: 1.00 / 1,00 / 1
  
     $method = 'psc';                                             // Ta zmienna definiuje metodę płatności wybraną przez użytkownika. Przykłady obejmują psc (Paysafecard), paypal, cashbill_blik lub cashbill.
 

@@ -14,7 +14,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $method = $data['method'] ?? null;
 
         $data = $numerzamowienia.$meil.$cokupil.$kwota;
-        $secretKey = 'hash';        // Ta zmienna zawiera HASH wygenerowany na stronie remsopay.eu (Wkrótce).
+        $secretKey = 'hash';        // Ta zmienna zawiera HASH wygenerowany na stronie remsopay.eu.
         $generatedHMAC = hash_hmac('sha256', $data, $secretKey);
 
         if (hash_equals($code, $generatedHMAC)) {
@@ -45,7 +45,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     $accepted = 'http://localhost/submit_form.php';              // Ta zmienna określa adres URL, pod który zostaną przesłane dane o sukcesie płatności po przetworzeniu transakcji. Twój system powinien obsłużyć dane otrzymane z tego punktu końcowego, aby potwierdzić i przetworzyć udane płatności.
 
-    $hash = 'hash';                                              // Ta zmienna zawiera HASH wygenerowany na stronie remsopay.eu (Wkrótce).
+    $hash = 'hash';                                              // Ta zmienna zawiera HASH wygenerowany na stronie remsopay.eu.
         
 
     $postData = json_encode([
